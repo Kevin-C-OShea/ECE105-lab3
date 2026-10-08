@@ -1,0 +1,1 @@
+import numpy as np; print(np.eye(2) @ np.eye(2))

@@ -119,26 +119,35 @@ filename: the file to save the plot to
 def plot_MAB(m, N, n_set, t_set, f_set, filename):
     # 1. start a new figure
     pass
+    plt.figure()
+
     # 2. one labeled curve per t: zip over f_set and t_set
     pass
+    for f, t in zip(f_set, t_set):
+        plt.plot(n_set, f, label=t)
     # 3. x-axis label
     pass
+    plt.xlabel("X")
     # 4. y-axis label
     pass
+    plt.ylabel("Y")
     # 5. title, including m and N
     pass
+    plt.title("Monte Carlo simulation")
     # 6. legend
     pass
+    plt.legend()
     # 7. save to filename
     pass
+    plt.savefig("LAB2.pdf")
     # 8. show
     pass
-
+    plt.show()
 # Main program
 if __name__ == "__main__":
     np.random.seed(105)      # same random numbers every run
     m = 2                    # number of arms
-    N = 100                  # 100 to develop; 10000 to finish
+    N = 100                # 100 to develop; 10000 to finish
     n_set = np.arange(20, 601, 20)   # pulls: 20, 40, ..., 600
     t_set = [1, 2, 4, 8, 16, 32]     # max explore pulls per arm
 
@@ -150,3 +159,4 @@ if __name__ == "__main__":
 
     filename = f"Lab2_m{m}_N{N}.pdf"
     plot_MAB(m, N, n_set, t_set, f_set, filename)
+    print(play_MAB_ave(2, 100, 4, 100))
