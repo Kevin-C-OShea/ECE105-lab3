@@ -127,10 +127,10 @@ def plot_MAB(m, N, n_set, t_set, f_set, filename):
         plt.plot(n_set, f, label=t)
     # 3. x-axis label
     pass
-    plt.xlabel("X")
+    plt.xlabel("N")
     # 4. y-axis label
     pass
-    plt.ylabel("Y")
+    plt.ylabel("f(n)")
     # 5. title, including m and N
     pass
     plt.title("Monte Carlo simulation")
@@ -139,7 +139,7 @@ def plot_MAB(m, N, n_set, t_set, f_set, filename):
     plt.legend()
     # 7. save to filename
     pass
-    plt.savefig("LAB2.pdf")
+    plt.savefig(filename)
     # 8. show
     pass
     plt.show()
